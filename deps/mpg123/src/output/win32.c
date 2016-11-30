@@ -19,8 +19,8 @@
     loads for my system, however this may not be true for any hardware/OS out there.
     Generally, BUFFER_SIZE < 8k || NUM_BUFFERS > 16 || NUM_BUFFERS < 4 are not recommended.
 */
-#define BUFFER_SIZE 0x10000
-#define NUM_BUFFERS 8  /* total 512k roughly 2.5 sec of CD quality sound */
+#define BUFFER_SIZE 8000
+#define NUM_BUFFERS 6  /* total 512k roughly 2.5 sec of CD quality sound */
 
 static void wait_for_buffer(WAVEHDR* hdr, HANDLE hEvent);
 static void drain_win32(struct audio_output_struct *ao);
